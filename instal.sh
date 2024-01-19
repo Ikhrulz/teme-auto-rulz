@@ -17,7 +17,7 @@ installTheme(){
     npm i -g yarn
 
     cd /var/www/pterodactyl
-    git clone https://github.com/Ikhrulz/teme-auto-rulz/blob/main/tema.zip
+    git clone https://github.com/Ikhrulz/teme-auto-rulz
     unzip tema.zip
     yarn add react-feather
     php artisan migrate
