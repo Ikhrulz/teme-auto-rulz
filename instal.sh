@@ -11,15 +11,19 @@ installTheme(){
 
     curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
     apt update
+    sudo apt install zip unzip
     apt install -y nodejs
 
     npm i -g yarn
-    yarn
 
     cd /var/www/pterodactyl
+    git clone https://github.com/Ikhrulz/teme-auto-rulz/blob/main/tema.zip
+    unzip tema.zip
     yarn add react-feather
+    php artisan migrate
+    > yes
     yarn build:production
-    sudo php artisan optimize:clear
+    sudo php artisan view:clear
 
 
 }
